@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping - Hunger Mall</title>
+    <link rel="stylesheet" href="shopping.css">
+</head>
+<body>
+    <nav> 
+        <div id="nav-head"><h3>Hunger <span> Mall</span></h3></div>
+        <ul>
+        <li><a href="index.html"> Home</a></li>
+        <li><a href="products.html"> Products</a></li>
+        <li><a href=""> Gallery</a></li>
+        <li><a href="shopping.html"> Order</a></li>
+        <li><a href=""> Similar Websites</a></li>
+        <li><a href=""> Book</a></li>
+    </ul>
+
+        <button class="btn">Cart</button>
+        <button id="cart"><img src="" alt="cart" srcset=""></button>
+    </nav>
+    <section id="content">
+        <form action="">
+            <div class="row" id="Name"><label for="">Customer Name</label> <input type="text" required minlength="4"></div>
+            <div class="row" id="Item"><label for="">Items : </label>
+            <ol>
+                <li>Mexican Taco: <br> Price:$4.99  <span class="right"> <label for="Quantity">Quantity: </label><select name="" id="qty1">
+                    <option value="0" selected>0</option>
+                    <option value="3">3(minimum)</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select></span></li>
+                <li>Hakka Noodles: <br> Price:$6.45 <span class="right"> <label for="Quantity">Quantity: </label><select name="" id="qty2">
+                    <option value="0" selected>0</option>
+                    <option value="3">3(minimum)</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select></span></li>
+                <li>Farmhouse Pizza : <br> Price:$6.77 <span class="right"> <label for="Quantity">Quantity: </label><select name="" id="qty3">
+                    <option value="0" selected>0</option>
+                    <option value="3">3(minimum)</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select></span></li>
+            </ol></div>
+            <div class="row"><label for="">Total Cost:  </label> <label id="output" type="text" disabled></label><br> <br> 
+            </div>
+            <div class="row" style="text-align: center;"><button style="width: 10rem" class="btn" id="calcBtn">Calculate Total Cost</button></div>
+            <div class="row"><button style = "width: 10rem;" class="btn" type="submit">Submit</button> <input style="width: 10rem;" class="btn right" id="reset" type="reset" value="Reset"></div>
+        </form>
+    </section>
+
+    <script>
+        document.getElementById("calcBtn").addEventListener("click",()=>{
+                let a = document.getElementById("qty1");
+                let b = document.getElementById("qty2");
+                let c = document.getElementById("qty3");
+                let qty1 = parseInt(a.options[a.selectedIndex].value);
+                let qty2 = parseInt(b.options[b.selectedIndex].value);
+                let qty3 = parseInt(c.options[c.selectedIndex].value);
+                price1= 4.99; price2=6.45;price3=6.77;
+                console.log(qty1);
+                 let totalCost = (price1*qty1) + (price2*qty2) + (price3*qty3);
+                 totalCost=totalCost.toFixed(2);
+                document.getElementById("output").textContent="$"+totalCost;
+        });
+        document.getElementById("")
+    </script>
+</body>
+</html>

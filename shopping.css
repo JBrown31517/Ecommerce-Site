@@ -1,0 +1,125 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: hsl(0deg 0% 98%);
+    display: flex;
+    min-height: 700px;
+}
+/* navbar */
+.btn1{
+    background-color: #ff4e4e;
+    border: transparent;
+    width: 50%;
+    height: 2.6rem;
+    border-radius: 25px;
+    color: whitesmoke;
+    cursor:pointer;
+    transition:all;
+    transition-duration: 0.5s;
+}
+.btn1:hover{
+    transform: scale(1.1);
+}
+.btn1:active{
+    transform: scale(0.5);
+}
+.bar{
+    height: 4px;
+    margin: 4px;
+    width: 2rem;
+    background-color: tomato;
+}
+.bar:nth-child(2){
+    width: 3rem;
+}
+#cart{
+    display: none;
+    border: none;
+    background: transparent;
+
+}
+#cart img{
+    width: 6rem;
+}
+nav > * {
+    margin: 0 2rem;
+}
+nav{
+    display: inline-block;
+    flex: 1 1 15%;
+    margin:1rem;    
+}
+nav h3{
+    margin: 2rem 2rem;
+    font-family: 'DM Serif Display';
+    font-size: 2.5rem;
+}
+ul{
+    margin: 2rem 2rem;
+}
+ul li{
+    margin: 2.5rem 0;
+    list-style: none;
+    
+}
+ul li a{
+    color: #7f7f7f;
+    font-family: 'Baloo 2', cursive; 
+    text-decoration: none;
+    transition: text-decoration;
+    transition-duration: 0.2s;
+}
+ul li a:hover{
+    text-decoration: line-through #ef6060;
+}
+.btn{
+    background-color: #ff4e4e;
+    border: transparent;
+    width: 50%;
+    height: 2.6rem;
+    border-radius: 25px;
+    color: whitesmoke;
+    cursor:pointer;
+    transition:all;
+    transition-duration: 0.5s;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+.btn:active{
+    transform: scale(0.5);
+}
+/* Content */   
+#content{
+    display: flex;
+    margin:1rem;
+    flex: 1 1 80%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    background-color: #e8e8e8;
+    border: transparent;
+    border-radius: 10%;
+    width: 60%;
+    height: fit-content;
+    font-size: larger;
+}
+.row{
+    /* text-align: center; */
+    width: 80%;
+    margin: 2rem auto;
+    /* border: 2px solid blue; */
+}
+input[type=text]{
+ border: 1px solid black;
+}
+.row li{
+    margin: 1.5rem;
+}
+.right{
+    float: right;
+}
